@@ -52,7 +52,11 @@
 			isa = PBXGroup;
 			children = (
 				E239E96328A6F4E600CFE51F /* BuyMyRideApp.swift */,
-				E239E96528A6F4E600CFE51F /* ContentView.swift */,
+				E239E97528A6FDE200CFE51F /* Views */,
+				E239E97428A6FDCF00CFE51F /* ViewModels */,
+				E239E97328A6FDB000CFE51F /* Models */,
+				E239E97228A6FD9B00CFE51F /* Services */,
+				E239E97128A6FD8000CFE51F /* Helpers */,
 				E239E96728A6F4E700CFE51F /* Assets.xcassets */,
 				E239E96928A6F4E700CFE51F /* Preview Content */,
 			);
@@ -65,6 +69,42 @@
 				E239E96A28A6F4E700CFE51F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E239E97128A6FD8000CFE51F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E239E97228A6FD9B00CFE51F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E239E97328A6FDB000CFE51F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E239E97428A6FDCF00CFE51F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E239E97528A6FDE200CFE51F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E239E96528A6F4E600CFE51F /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
