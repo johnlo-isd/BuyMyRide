@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2387DB828AC371100C84757 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2387DB728AC371100C84757 /* Colors.xcassets */; };
+		E2387DBB28AC381200C84757 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2387DBA28AC381200C84757 /* ColorManager.swift */; };
 		E239E96428A6F4E600CFE51F /* BuyMyRideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E96328A6F4E600CFE51F /* BuyMyRideApp.swift */; };
 		E239E96628A6F4E600CFE51F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E96528A6F4E600CFE51F /* ContentView.swift */; };
 		E239E96828A6F4E700CFE51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E239E96728A6F4E700CFE51F /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2387DB728AC371100C84757 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E2387DBA28AC381200C84757 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E239E96028A6F4E600CFE51F /* BuyMyRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyMyRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E239E96328A6F4E600CFE51F /* BuyMyRideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyMyRideApp.swift; sourceTree = "<group>"; };
 		E239E96528A6F4E600CFE51F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2387DB928AC37D900C84757 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E2387DBA28AC381200C84757 /* ColorManager.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E239E95728A6F4E600CFE51F = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +68,9 @@
 				E239E97428A6FDCF00CFE51F /* ViewModels */,
 				E239E97328A6FDB000CFE51F /* Models */,
 				E239E97228A6FD9B00CFE51F /* Services */,
+				E2387DB928AC37D900C84757 /* Resources */,
 				E239E97128A6FD8000CFE51F /* Helpers */,
+				E2387DB728AC371100C84757 /* Colors.xcassets */,
 				E239E96728A6F4E700CFE51F /* Assets.xcassets */,
 				E239E96928A6F4E700CFE51F /* Preview Content */,
 			);
@@ -165,6 +179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2387DB828AC371100C84757 /* Colors.xcassets in Resources */,
 				E239E96B28A6F4E700CFE51F /* Preview Assets.xcassets in Resources */,
 				E239E96828A6F4E700CFE51F /* Assets.xcassets in Resources */,
 			);
@@ -177,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2387DBB28AC381200C84757 /* ColorManager.swift in Sources */,
 				E239E96628A6F4E600CFE51F /* ContentView.swift in Sources */,
 				E239E96428A6F4E600CFE51F /* BuyMyRideApp.swift in Sources */,
 			);
