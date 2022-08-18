@@ -9,12 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    init() {
-//        let navBarAppearance = UINavigationBar.appearance()
-//        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: ColorManager.accentColor]
-//        navBarAppearance.titleTextAttributes = [.foregroundColor: ColorManager.accentColor]
-//    }
-    
     var body: some View {
         
         NavigationView {
@@ -26,25 +20,25 @@ struct ContentView: View {
                     GeometryReader { geo in
                         
                         // Lazy Vertical Stack so it will only render elements as needed/when they come into frame
-                        LazyVStack(alignment: .leading) {
+                        LazyVStack() {
                             
                             // Row
                             HStack {
                                 
                                 // Car image
-                                Image("flying car")
+                                Image("xr-7")
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
                                     .frame(width: geo.size.width/2)
                                 
                                 // Car info
                                 VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
+                                    Text("XR-7")
                                         .bold()
                                         .font(Font.custom("Avenir Heavy", size: 16))
                                     
                                     
-                                    Text("$85,000")
+                                    Text("$1,025,000")
                                         .font(.footnote)
                                         .foregroundColor(.gray)
                                     
@@ -263,7 +257,7 @@ struct ContentView: View {
                     } // geo
                 }
             }
-            .navigationBarTitle("Car Listing")
+            .navigationBarTitle(Constants.appTitle)
             .padding()
             .background(ColorManager.backgroundColor)
         }

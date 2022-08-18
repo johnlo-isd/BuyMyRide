@@ -1,0 +1,50 @@
+[
+	{
+		"id": 0,
+		"name": "XR-7",
+		"price": "$1,025,000",
+		"image": "xr-7"
+	},
+	{
+		"id": 1,
+		"name": "Dino EV",
+		"price": "$85,000",
+		"image": "dino ev"
+	},
+	{
+		"id": 2,
+		"name": "EQ",
+		"price": "$67,000",
+		"image": "eq"
+	},
+	{
+		"id": 3,
+		"name": "GM Mini",
+		"price": "30,000",
+		"image": "gm mini"
+	},
+	{
+		"id": 4,
+		"name": "Lexus EV Supercar",
+		"price": "$250,000",
+		"image": "lexus ev supercar"
+	},
+	{
+		"id": 5,
+		"name": "Mercedes-Benz F 016",
+		"price": "$175,000",
+		"image": "mercedes-benz f 016"
+	},
+	{
+		"id": 6,
+		"name": "Mercedes-Benz Mach 6",
+		"price": "$1,000,000",
+		"image": "mercedes-benz mach 6"
+	},
+	{
+		"id": 7,
+		"name": "Mercedes-Benz Vision AVTR",
+		"price": "$125,000",
+		"image": "mercedes-benz vision avtr"
+	}
+]

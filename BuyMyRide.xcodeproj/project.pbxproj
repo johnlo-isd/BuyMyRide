@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E220CCAE28AD89BA00AE64D2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220CCAD28AD89BA00AE64D2 /* Constants.swift */; };
+		E220CCB028AD8B5E00AE64D2 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220CCAF28AD8B5E00AE64D2 /* Vehicle.swift */; };
+		E220CCB228AD8DD300AE64D2 /* BuyMyRideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E220CCB128AD8DD300AE64D2 /* BuyMyRideModel.swift */; };
 		E2387DB828AC371100C84757 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2387DB728AC371100C84757 /* Colors.xcassets */; };
 		E2387DBB28AC381200C84757 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2387DBA28AC381200C84757 /* ColorManager.swift */; };
 		E239E96428A6F4E600CFE51F /* BuyMyRideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E96328A6F4E600CFE51F /* BuyMyRideApp.swift */; };
 		E239E96628A6F4E600CFE51F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E239E96528A6F4E600CFE51F /* ContentView.swift */; };
 		E239E96828A6F4E700CFE51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E239E96728A6F4E700CFE51F /* Assets.xcassets */; };
 		E239E96B28A6F4E700CFE51F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E239E96A28A6F4E700CFE51F /* Preview Assets.xcassets */; };
+		E24E399C28AEC8230083D76F /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = E24E399B28AEC8230083D76F /* data.json */; };
+		E24E399E28AEC8CA0083D76F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E399D28AEC8CA0083D76F /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E220CCAD28AD89BA00AE64D2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E220CCAF28AD8B5E00AE64D2 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		E220CCB128AD8DD300AE64D2 /* BuyMyRideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyMyRideModel.swift; sourceTree = "<group>"; };
 		E2387DB728AC371100C84757 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E2387DBA28AC381200C84757 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		E239E96028A6F4E600CFE51F /* BuyMyRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuyMyRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +31,8 @@
 		E239E96528A6F4E600CFE51F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E239E96728A6F4E700CFE51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E239E96A28A6F4E700CFE51F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E24E399B28AEC8230083D76F /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		E24E399D28AEC8CA0083D76F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,7 @@
 				E239E97328A6FDB000CFE51F /* Models */,
 				E239E97228A6FD9B00CFE51F /* Services */,
 				E2387DB928AC37D900C84757 /* Resources */,
+				E24E399A28AEC7E30083D76F /* Data */,
 				E239E97128A6FD8000CFE51F /* Helpers */,
 				E2387DB728AC371100C84757 /* Colors.xcassets */,
 				E239E96728A6F4E700CFE51F /* Assets.xcassets */,
@@ -88,6 +99,7 @@
 		E239E97128A6FD8000CFE51F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				E220CCAD28AD89BA00AE64D2 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -95,6 +107,7 @@
 		E239E97228A6FD9B00CFE51F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E24E399D28AEC8CA0083D76F /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -102,6 +115,7 @@
 		E239E97328A6FDB000CFE51F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E220CCAF28AD8B5E00AE64D2 /* Vehicle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -109,6 +123,7 @@
 		E239E97428A6FDCF00CFE51F /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E220CCB128AD8DD300AE64D2 /* BuyMyRideModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -119,6 +134,14 @@
 				E239E96528A6F4E600CFE51F /* ContentView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E24E399A28AEC7E30083D76F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E24E399B28AEC8230083D76F /* data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +205,7 @@
 				E2387DB828AC371100C84757 /* Colors.xcassets in Resources */,
 				E239E96B28A6F4E700CFE51F /* Preview Assets.xcassets in Resources */,
 				E239E96828A6F4E700CFE51F /* Assets.xcassets in Resources */,
+				E24E399C28AEC8230083D76F /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +217,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2387DBB28AC381200C84757 /* ColorManager.swift in Sources */,
+				E24E399E28AEC8CA0083D76F /* DataService.swift in Sources */,
 				E239E96628A6F4E600CFE51F /* ContentView.swift in Sources */,
 				E239E96428A6F4E600CFE51F /* BuyMyRideApp.swift in Sources */,
+				E220CCB028AD8B5E00AE64D2 /* Vehicle.swift in Sources */,
+				E220CCB228AD8DD300AE64D2 /* BuyMyRideModel.swift in Sources */,
+				E220CCAE28AD89BA00AE64D2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
