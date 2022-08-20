@@ -6,8 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Constants {
     
     static var appTitle = "Car Listing"
+    static var ShowDetails = "Show details"
+    
+    static var font = "Avenir Heavy"
+    
+    static var cornerRadius: CGFloat = 15
 }

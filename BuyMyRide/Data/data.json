@@ -1,21 +1,21 @@
 [
 	{
 		"id": 0,
-		"name": "XR-7",
+		"name": "Tesla XR-7",
 		"price": "$1,025,000",
-		"image": "xr-7"
+		"image": "tesla xr-7"
 	},
 	{
 		"id": 1,
-		"name": "Dino EV",
+		"name": "VW Dino EV",
 		"price": "$85,000",
-		"image": "dino ev"
+		"image": "vw dino ev"
 	},
 	{
 		"id": 2,
-		"name": "EQ",
+		"name": "Ford EQ",
 		"price": "$67,000",
-		"image": "eq"
+		"image": "ford eq"
 	},
 	{
 		"id": 3,

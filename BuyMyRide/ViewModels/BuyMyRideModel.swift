@@ -9,4 +9,14 @@ import Foundation
 
 @MainActor class BuyMyRideModel: ObservableObject {
     
+    @Published var vehicles = [Vehicle]()
+    
+    init() {
+        
+        // Create data service instance
+        let service = DataService()
+        
+        // Get the data
+        self.vehicles = service.getLocalData()
+    }
 }

@@ -12,6 +12,7 @@ struct BuyMyRideApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(BuyMyRideModel())
         }
     }
 }

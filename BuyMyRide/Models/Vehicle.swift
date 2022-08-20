@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct VehicleJSON: Codable, Identifiable {
+struct Vehicle: Codable, Identifiable {
     
-    var id: String
+    var id: Int
     var name: String
     var price: String
     var image: String

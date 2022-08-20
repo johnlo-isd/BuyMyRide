@@ -9,7 +9,7 @@ import Foundation
 
 class DataService {
     
-    static func getLocalData() -> [VehicleJSON] {
+    func getLocalData() -> [Vehicle] {
         
         // MARK: Parse Local JSON File
         
@@ -20,7 +20,7 @@ class DataService {
         guard pathString != nil else {
             
             // Nil so return empty type of VehicleJSON
-            return [VehicleJSON]()
+            return [Vehicle]()
         }
         
         // Create a url object
@@ -36,7 +36,7 @@ class DataService {
             let decoder = JSONDecoder()
             
             do {
-                let vehicleData = try decoder.decode([VehicleJSON].self, from: data) // using .self to refer to that data type
+                let vehicleData = try decoder.decode([Vehicle].self, from: data) // using .self to refer to that data type
                 
                 // Return the vehicle
                 return vehicleData
@@ -52,6 +52,6 @@ class DataService {
         }
         
         // Things didn't work, so return an empty array of Vehicle
-        return [VehicleJSON]()
+        return [Vehicle]()
     }
 }

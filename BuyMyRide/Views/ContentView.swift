@@ -9,6 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var model: BuyMyRideModel
+    
+    
+    init() {
+        // NavigationBarTitle color
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
+    }
+    
     var body: some View {
         
         NavigationView {
@@ -16,248 +24,18 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 
                 ScrollView {
-                    
-                    GeometryReader { geo in
                         
-                        // Lazy Vertical Stack so it will only render elements as needed/when they come into frame
                         LazyVStack() {
                             
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("xr-7")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("XR-7")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$1,025,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
+                            // Loop through the list of vehicles and add them to the screen
+                            ForEach(model.vehicles) { vehicle in
+                                RowView(name: vehicle.name, price: vehicle.price, image: vehicle.image)
                             }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
-                            
-                            // Row
-                            HStack {
-                                
-                                // Car image
-                                Image("flying car")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: geo.size.width/2)
-                                
-                                // Car info
-                                VStack(alignment: .leading) {
-                                    Text("Mevedes C-Class")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                    
-                                    
-                                    Text("$85,000")
-                                        .font(.footnote)
-                                        .foregroundColor(.gray)
-                                    
-                                    
-                                    Spacer()
-                                    
-                                    Text("Show details")
-                                        .bold()
-                                        .font(Font.custom("Avenir Heavy", size: 16))
-                                        .foregroundColor(.blue)
-                                }
-                                .padding(.vertical)
-                                .frame(width: geo.size.width/2)
-                            }
-                            .background(.white)
                         }
-                        .cornerRadius(15)
-                    } // geo
                 }
             }
             .navigationBarTitle(Constants.appTitle)
+            .navigationBarHidden(false)
             .padding()
             .background(ColorManager.backgroundColor)
         }
