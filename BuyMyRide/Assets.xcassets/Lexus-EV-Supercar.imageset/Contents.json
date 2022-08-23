@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Lexus EV Supercar.jpg",
+      "filename" : "Lexus-EV-Supercar.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Lexus-EV-Supercar@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Lexus-EV-Supercar@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

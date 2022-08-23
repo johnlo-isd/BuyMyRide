@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Dino EV.jpg",
+      "filename" : "Mercedes-Benz-Vision-AVTR.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Mercedes-Benz-Vision-AVTR@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Mercedes-Benz-Vision-AVTR@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

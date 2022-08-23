@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Mercedes-Benz Mach 6.jpg",
+      "filename" : "Mercedes-Benz-Dolphin.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Mercedes-Benz-Dolphin@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Mercedes-Benz-Dolphin@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

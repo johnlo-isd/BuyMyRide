@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "EQ.jpg",
+      "filename" : "GM-Mini-V2.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "GM-Mini-V2@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "GM-Mini-V2@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

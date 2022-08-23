@@ -1,50 +1,50 @@
 [
 	{
 		"id": 0,
-		"name": "Tesla XR-7",
+		"name": "Suzuki/SkyDrive SD XX",
 		"price": "$1,025,000",
-		"image": "tesla xr-7"
+		"image": "Suzuki-SkyDrive-SD-XX"
 	},
 	{
 		"id": 1,
-		"name": "VW Dino EV",
+		"name": "Ferrari-Dino-EV",
 		"price": "$85,000",
-		"image": "vw dino ev"
+		"image": "Ferrari-Dino-EV"
 	},
 	{
 		"id": 2,
-		"name": "Ford EQ",
+		"name": "Ford F016 XT",
 		"price": "$67,000",
-		"image": "ford eq"
+		"image": "Ford-F016-XT"
 	},
 	{
 		"id": 3,
-		"name": "GM Mini",
+		"name": "GM Mini V2",
 		"price": "30,000",
-		"image": "gm mini"
+		"image": "GM-Mini-V2"
 	},
 	{
 		"id": 4,
 		"name": "Lexus EV Supercar",
 		"price": "$250,000",
-		"image": "lexus ev supercar"
+		"image": "Lexus-EV-Supercar"
 	},
 	{
 		"id": 5,
-		"name": "Mercedes-Benz F 016",
+		"name": "Ford F016 XT",
 		"price": "$175,000",
-		"image": "mercedes-benz f 016"
+		"image": "Ford-F016-XT"
 	},
 	{
 		"id": 6,
-		"name": "Mercedes-Benz Mach 6",
+		"name": "Mercedes-Benz Dolphin",
 		"price": "$1,000,000",
-		"image": "mercedes-benz mach 6"
+		"image": "Mercedes-Benz-Dolphin"
 	},
 	{
 		"id": 7,
 		"name": "Mercedes-Benz Vision AVTR",
 		"price": "$125,000",
-		"image": "mercedes-benz vision avtr"
+		"image": "Mercedes-Benz-Vision-AVTR"
 	}
 ]

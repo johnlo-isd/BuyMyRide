@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "XR-7.jpg",
+      "filename" : "Mercedes-Benz-Silver-Arrow-EQ.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Mercedes-Benz-Silver-Arrow-EQ@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Mercedes-Benz-Silver-Arrow-EQ@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

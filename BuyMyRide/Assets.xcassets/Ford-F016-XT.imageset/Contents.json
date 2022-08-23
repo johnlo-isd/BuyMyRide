@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "GM Mini.jpg",
+      "filename" : "Ford-F016-XT.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Ford-F016-XT@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Ford-F016-XT@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

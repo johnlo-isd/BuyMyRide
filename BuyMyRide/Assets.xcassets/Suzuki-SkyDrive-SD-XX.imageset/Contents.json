@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Mercedes-Benz Vision AVTR.jpg",
+      "filename" : "Suzuki-SkyDrive-SD-XX.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Suzuki-SkyDrive-SD-XX@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Suzuki-SkyDrive-SD-XX@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }
