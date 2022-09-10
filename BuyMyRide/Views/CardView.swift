@@ -10,6 +10,7 @@ import SwiftUI
 struct CardView: View {
     
     var vehicle: Vehicle
+    let isExpanded: Bool
     
     var body: some View {
         
@@ -69,48 +70,51 @@ struct CardView: View {
                         
                         // Pros and Cons
                         
-                        // Are there any Pros
-                        if vehicle.pros != nil {
-                            Text(Constants.pros + ":")
-                                .bold()
-                                .font(.footnote)
+                        if isExpanded {
                             
-                            VStack(alignment: .leading) {
-                                
-                                // Loop through the pros
-                                ForEach(vehicle.pros!, id: \.self) { item in
-                                    HStack(alignment: .top) {
-                                        Text(" •")
-                                        Text(item)
-                                    }
+                            // Are there any Pros
+                            if vehicle.pros != nil {
+                                Text(Constants.pros + ":")
+                                    .bold()
                                     .font(.footnote)
+                                
+                                VStack(alignment: .leading) {
+                                    
+                                    // Loop through the pros
+                                    ForEach(vehicle.pros!, id: \.self) { item in
+                                        HStack(alignment: .top) {
+                                            Text(" •")
+                                            Text(item)
+                                        }
+                                        .font(.footnote)
+                                    }
                                 }
                             }
-                        }
-                        
-                        // Are the any Cons
-                        if vehicle.cons != nil {
-                            Text(Constants.cons + ":")
-                                .bold()
-                                .font(.footnote)
                             
-                            VStack(alignment: .leading) {
-                                
-                                // Loop through the cons
-                                ForEach(vehicle.cons!, id: \.self) { item in
-                                    HStack(alignment: .top) {
-                                        Text(" •")
-                                        Text(item)
-                                    }
+                            // Are the any Cons
+                            if vehicle.cons != nil {
+                                Text(Constants.cons + ":")
+                                    .bold()
                                     .font(.footnote)
+                                
+                                VStack(alignment: .leading) {
+                                    
+                                    // Loop through the cons
+                                    ForEach(vehicle.cons!, id: \.self) { item in
+                                        HStack(alignment: .top) {
+                                            Text(" •")
+                                            Text(item)
+                                        }
+                                        .font(.footnote)
+                                    }
                                 }
                             }
-                        }
-                        
-                        // There are no Pros or Cons
-                        if vehicle.pros == nil && vehicle.cons == nil {
-                            Text(Constants.noDetails)
-                                .font(.footnote)
+                            
+                            // There are no Pros or Cons
+                            if vehicle.pros == nil && vehicle.cons == nil {
+                                Text(Constants.noDetails)
+                                    .font(.footnote)
+                            }
                         }
                         
                         Spacer()
@@ -151,6 +155,6 @@ struct RoundedCorner: Shape {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(vehicle: Vehicle(id: 0, make: "", model: "", price: "", image: "", rating: 3))
+        CardView(vehicle: Vehicle(id: 0, make: "", model: "", price: "", image: "", rating: 3), isExpanded: true)
     }
 }

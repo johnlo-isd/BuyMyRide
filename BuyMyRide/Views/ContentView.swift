@@ -25,7 +25,13 @@ struct ContentView: View {
                 
                 // Loop through the list of vehicles and add them to the screen
                 ForEach(model.vehicles) { vehicle in
-                    CardView(vehicle: vehicle)
+                    CardView(vehicle: vehicle, isExpanded: model.selection.contains(vehicle))
+                        .onTapGesture {
+                            // Expand or collapse the card when it's tapped
+                            model.expand(vehicle)
+                        }
+                    // Animate the expand or collapse
+                        .animation(.easeInOut(duration: 0.2), value: model.selection)
                 }
             }
         }
