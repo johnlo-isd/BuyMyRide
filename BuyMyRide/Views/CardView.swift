@@ -9,77 +9,123 @@ import SwiftUI
 
 struct CardView: View {
     
-    var make: String
-    var model: String
-    var price: String
-    var image: String
-    var rating: Int
+    var vehicle: Vehicle
     
     var body: some View {
         
-        // Row
-        ZStack(alignment: .leading) {
+        HStack {
             
-            // Background
-            Rectangle()
-                .foregroundColor(.white)
-                .cornerRadius(Constants.cornerRadius)
-                .aspectRatio(CGSize(width: 335, height: 130), contentMode: .fit)
-            
-            HStack {
+            // Card
+            ZStack(alignment: .leading) {
                 
-                // Vehicle image
-                Image(image)
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 175, alignment: .leading)
-                    .clipped()
-                    .cornerRadius(Constants.cornerRadius, corners: [.topLeft, .bottomLeft])
+                // Background
+                Rectangle()
+                    .foregroundColor(.white)
+                    .cornerRadius(Constants.cornerRadius)
                 
-                // Vehicle info
-                VStack(alignment: .leading) {
+                HStack {
                     
-                    Text(make + " " + model)
-                        .bold()
-                        .font(Font.custom(Constants.font, size: 16))
-                        .foregroundColor(ColorManager.titleColor)
+                    // Vehicle image
+                    Image(vehicle.image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(maxWidth: 175, minHeight: 125)
+                        .clipped()
+                        .cornerRadius(Constants.cornerRadius, corners: [.topLeft, .bottomLeft])
                     
-                    Text(price)
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                    
-                    // Rating
-                    HStack {
+                    // Vehicle info
+                    VStack(alignment: .leading) {
                         
-                        // The number of stars rated
-                        ForEach (1..<rating+1) { i in
-                            Image(systemName: "star.fill")
-                                .font(.footnote)
-                                .foregroundColor(ColorManager.titleColor)
-                                .padding(.horizontal, -5)
-                        }
+                        Text(vehicle.make + " " + vehicle.model)
+                            .bold()
+                            .font(Font.custom(Constants.fontH1, size: Constants.fontH1Size))
+                            .foregroundColor(ColorManager.titleColor)
                         
-                        // The number of stars not rated
-                        if rating < 5 {
-                            ForEach(0..<5-rating) { i in
-                                Image(systemName: "star")
+                        Text(vehicle.price)
+                            .font(.footnote)
+                            .foregroundColor(ColorManager.lightColor)
+                        
+                        // Rating
+                        HStack {
+                            
+                            // The number of stars rated
+                            ForEach (1..<vehicle.rating+1) { i in
+                                Image(systemName: "star.fill")
                                     .font(.footnote)
+                                    .foregroundColor(ColorManager.titleColor)
                                     .padding(.horizontal, -5)
                             }
+                            
+                            // The number of stars not rated
+                            if vehicle.rating < 5 {
+                                ForEach(0..<5-vehicle.rating) { i in
+                                    Image(systemName: "star")
+                                        .font(.footnote)
+                                        .padding(.horizontal, -5)
+                                }
+                            }
                         }
+                        .font(.system(size: 9))
+                        
+                        // Pros and Cons
+                        
+                        // Are there any Pros
+                        if vehicle.pros != nil {
+                            Text(Constants.pros + ":")
+                                .bold()
+                                .font(.footnote)
+                            
+                            VStack(alignment: .leading) {
+                                
+                                // Loop through the pros
+                                ForEach(vehicle.pros!, id: \.self) { item in
+                                    HStack(alignment: .top) {
+                                        Text(" •")
+                                        Text(item)
+                                    }
+                                    .font(.footnote)
+                                }
+                            }
+                        }
+                        
+                        // Are the any Cons
+                        if vehicle.cons != nil {
+                            Text(Constants.cons + ":")
+                                .bold()
+                                .font(.footnote)
+                            
+                            VStack(alignment: .leading) {
+                                
+                                // Loop through the cons
+                                ForEach(vehicle.cons!, id: \.self) { item in
+                                    HStack(alignment: .top) {
+                                        Text(" •")
+                                        Text(item)
+                                    }
+                                    .font(.footnote)
+                                }
+                            }
+                        }
+                        
+                        // There are no Pros or Cons
+                        if vehicle.pros == nil && vehicle.cons == nil {
+                            Text(Constants.noDetails)
+                                .font(.footnote)
+                        }
+                        
+                        Spacer()
+                        
+                        Text(Constants.ShowDetails)
+                            .bold()
+                            .font(Font.system(size: Constants.fontH3Size))
+                            .foregroundColor(.blue)
                     }
-                    
-                    Spacer()
-                    
-                    Text(Constants.ShowDetails)
-                        .bold()
-                        .font(Font.custom(Constants.font, size: 16))
-                        .foregroundColor(.blue)
+                    .padding(.vertical, 5)
+                    .padding(.trailing, 5)
                 }
-                .padding(.vertical, 5)
-                .padding(.trailing, 5)
             }
         }
+        .contentShape(Rectangle())
     }
 }
 
@@ -105,6 +151,6 @@ struct RoundedCorner: Shape {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(make: "", model: "XR-7", price: "$1,025,000", image: "xr-7", rating: 4)
+        CardView(vehicle: Vehicle(id: 0, make: "", model: "", price: "", image: "", rating: 3))
     }
 }

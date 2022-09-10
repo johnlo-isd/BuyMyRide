@@ -5,7 +5,9 @@
         "model": "SD XX",
         "price": "$1,025,000",
         "image": "Suzuki-SkyDrive-SD-XX",
-        "rating": 5
+        "rating": 5,
+        "pros": ["It flys", "Super fast"],
+        "cons": ["Very expensive", "Need pilots license for this"]
     },
     {
         "id": 1,
@@ -13,7 +15,9 @@
         "model": "Dino-EV",
         "price": "$85,000",
         "image": "Ferrari-Dino-EV",
-        "rating": 4
+        "rating": 4,
+        "pros": ["Rims light up", "Price is ok"],
+        "cons": ["No color options", "Will get tickets for speeding"]
     },
     {
         "id": 2,
@@ -21,7 +25,9 @@
         "model": "Silver Arrow EQ",
         "price": "$67,000",
         "image": "Mercedes-Benz-Silver-Arrow-EQ",
-        "rating": 3
+        "rating": 3,
+        "pros": ["All electric", "800 miles on a single charge"],
+        "cons": ["Infrastructure for charging isn't available for long road trips", "Expensive to charge"]
     },
     {
         "id": 3,
@@ -29,7 +35,9 @@
         "model": "Mini V2",
         "price": "30,000",
         "image": "GM-Mini-V2",
-        "rating": 1
+        "rating": 1,
+        "pros": ["Perfect for city"],
+        "cons": ["Two persons only", "Charge is short lasting"]
     },
     {
         "id": 4,
@@ -37,7 +45,9 @@
         "model": "EV Supercar",
         "price": "$250,000",
         "image": "Lexus-EV-Supercar",
-        "rating": 3
+        "rating": 3,
+        "pros": ["Hybrid", "Energy efficient"],
+        "cons": ["Too expensive"]
     },
     {
         "id": 5,
@@ -45,7 +55,9 @@
         "model": "F016 XT",
         "price": "$175,000",
         "image": "Ford-F016-XT",
-        "rating": 2
+        "rating": 2,
+        "pros": ["Four seater"],
+        "cons": ["Hybride that uses too much fuel", "Slow speed"]
     },
     {
         "id": 6,
@@ -53,7 +65,9 @@
         "model": "Dolphin",
         "price": "$1,000,000",
         "image": "Mercedes-Benz-Dolphin",
-        "rating": 5
+        "rating": 5,
+        "pros": ["Smooth like a Dolphin", "Very fast"],
+        "cons": ["To much money for me", "Summer drinving only"]
     },
     {
         "id": 7,
@@ -61,7 +75,9 @@
         "model": "Vision AVTR",
         "price": "$125,000",
         "image": "Mercedes-Benz-Vision-AVTR",
-        "rating": 4
+        "rating": 4,
+        "pros": ["The body lights up", "Uses solar to help charge"],
+        "cons": ["Bit expensive", "Two seater"]
     }
 ]
 

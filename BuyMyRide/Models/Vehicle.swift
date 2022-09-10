@@ -15,4 +15,6 @@ struct Vehicle: Codable, Identifiable {
     var price: String
     var image: String
     var rating: Int
+    var pros: [String]?
+    var cons: [String]?
 }
