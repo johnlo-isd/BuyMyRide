@@ -14,4 +14,5 @@ struct ColorManager {
     static let backgroundColor = Color("BackgroundColor")
     static let foregroundColor = Color("ForegroundColor")
     static let lightColor = Color("LightColor")
+    static let titleColor = Color("TitleColor")
 }

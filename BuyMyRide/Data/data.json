@@ -1,50 +1,70 @@
 [
-	{
-		"id": 0,
-		"name": "Suzuki/SkyDrive SD XX",
-		"price": "$1,025,000",
-		"image": "Suzuki-SkyDrive-SD-XX"
-	},
-	{
-		"id": 1,
-		"name": "Ferrari-Dino-EV",
-		"price": "$85,000",
-		"image": "Ferrari-Dino-EV"
-	},
-	{
-		"id": 2,
-		"name": "Ford F016 XT",
-		"price": "$67,000",
-		"image": "Ford-F016-XT"
-	},
-	{
-		"id": 3,
-		"name": "GM Mini V2",
-		"price": "30,000",
-		"image": "GM-Mini-V2"
-	},
-	{
-		"id": 4,
-		"name": "Lexus EV Supercar",
-		"price": "$250,000",
-		"image": "Lexus-EV-Supercar"
-	},
-	{
-		"id": 5,
-		"name": "Ford F016 XT",
-		"price": "$175,000",
-		"image": "Ford-F016-XT"
-	},
-	{
-		"id": 6,
-		"name": "Mercedes-Benz Dolphin",
-		"price": "$1,000,000",
-		"image": "Mercedes-Benz-Dolphin"
-	},
-	{
-		"id": 7,
-		"name": "Mercedes-Benz Vision AVTR",
-		"price": "$125,000",
-		"image": "Mercedes-Benz-Vision-AVTR"
-	}
+    {
+        "id": 0,
+        "make": "Suzuki/SkyDrive",
+        "model": "SD XX",
+        "price": "$1,025,000",
+        "image": "Suzuki-SkyDrive-SD-XX",
+        "rating": 5
+    },
+    {
+        "id": 1,
+        "make": "Ferrari",
+        "model": "Dino-EV",
+        "price": "$85,000",
+        "image": "Ferrari-Dino-EV",
+        "rating": 4
+    },
+    {
+        "id": 2,
+        "make": "Mercedes-Benz",
+        "model": "Silver Arrow EQ",
+        "price": "$67,000",
+        "image": "Mercedes-Benz-Silver-Arrow-EQ",
+        "rating": 3
+    },
+    {
+        "id": 3,
+        "make": "GM",
+        "model": "Mini V2",
+        "price": "30,000",
+        "image": "GM-Mini-V2",
+        "rating": 1
+    },
+    {
+        "id": 4,
+        "make": "Lexus",
+        "model": "EV Supercar",
+        "price": "$250,000",
+        "image": "Lexus-EV-Supercar",
+        "rating": 3
+    },
+    {
+        "id": 5,
+        "make": "Ford",
+        "model": "F016 XT",
+        "price": "$175,000",
+        "image": "Ford-F016-XT",
+        "rating": 2
+    },
+    {
+        "id": 6,
+        "make": "Mercedes-Benz",
+        "model": "Dolphin",
+        "price": "$1,000,000",
+        "image": "Mercedes-Benz-Dolphin",
+        "rating": 5
+    },
+    {
+        "id": 7,
+        "make": "Mercedes-Benz",
+        "model": "Vision AVTR",
+        "price": "$125,000",
+        "image": "Mercedes-Benz-Vision-AVTR",
+        "rating": 4
+    }
 ]
+
+
+
+

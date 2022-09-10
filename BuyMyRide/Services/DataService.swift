@@ -20,6 +20,7 @@ class DataService {
         guard pathString != nil else {
             
             // Nil so return empty type of VehicleJSON
+            print("Error with path string")
             return [Vehicle]()
         }
         
@@ -43,11 +44,13 @@ class DataService {
                 
             // Error with parsing JSON
             } catch {
+                print("Error parsing JSON")
                 print(error)
             }
 
         // Error getting data
         } catch {
+            print("Error getting data")
             print(error)
         }
         

@@ -11,34 +11,26 @@ struct ContentView: View {
     
     @EnvironmentObject var model: BuyMyRideModel
     
-    
-    init() {
-        // NavigationBarTitle color
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.blue]
-    }
-    
     var body: some View {
         
-        NavigationView {
+        VStack {
             
-            VStack(alignment: .leading) {
+            Text(Constants.appTitle)
+                .bold()
+                .font(.title)
+                .foregroundColor(ColorManager.titleColor)
+            
+            // List of vehicles
+            ScrollView {
                 
-                ScrollView {
-                        
-                        LazyVStack() {
-                            
-                            // Loop through the list of vehicles and add them to the screen
-                            ForEach(model.vehicles) { vehicle in
-                                RowView(name: vehicle.name, price: vehicle.price, image: vehicle.image)
-                            }
-                        }
+                // Loop through the list of vehicles and add them to the screen
+                ForEach(model.vehicles) { vehicle in
+                    RowView(make: vehicle.make, model: vehicle.model, price: vehicle.price, image: vehicle.image, rating: vehicle.rating)
                 }
             }
-            .navigationBarTitle(Constants.appTitle)
-            .navigationBarHidden(false)
-            .padding()
-            .background(ColorManager.backgroundColor)
         }
+        .padding()
+        .background(ColorManager.backgroundColor)
     }
 }
 

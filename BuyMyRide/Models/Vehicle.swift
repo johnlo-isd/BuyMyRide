@@ -10,7 +10,9 @@ import Foundation
 struct Vehicle: Codable, Identifiable {
     
     var id: Int
-    var name: String
+    var make: String
+    var model: String
     var price: String
     var image: String
+    var rating: Int
 }

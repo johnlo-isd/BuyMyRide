@@ -9,9 +9,11 @@ import SwiftUI
 
 struct RowView: View {
     
-    var name: String
+    var make: String
+    var model: String
     var price: String
     var image: String
+    var rating: Int
     
     var body: some View {
         
@@ -30,20 +32,42 @@ struct RowView: View {
                 Image(image)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 175)
+                    .frame(width: 175, alignment: .leading)
                     .clipped()
                     .cornerRadius(Constants.cornerRadius, corners: [.topLeft, .bottomLeft])
                 
                 // Vehicle info
                 VStack(alignment: .leading) {
                     
-                    Text(name)
+                    Text(make + " " + model)
                         .bold()
                         .font(Font.custom(Constants.font, size: 16))
+                        .foregroundColor(ColorManager.titleColor)
                     
                     Text(price)
                         .font(.footnote)
                         .foregroundColor(.gray)
+                    
+                    // Rating
+                    HStack {
+                        
+                        // The number of stars rated
+                        ForEach (1..<rating+1) { i in
+                            Image(systemName: "star.fill")
+                                .font(.footnote)
+                                .foregroundColor(ColorManager.titleColor)
+                                .padding(.horizontal, -5)
+                        }
+                        
+                        // The number of stars not rated
+                        if rating < 5 {
+                            ForEach(0..<5-rating) { i in
+                                Image(systemName: "star")
+                                    .font(.footnote)
+                                    .padding(.horizontal, -5)
+                            }
+                        }
+                    }
                     
                     Spacer()
                     
@@ -52,9 +76,9 @@ struct RowView: View {
                         .font(Font.custom(Constants.font, size: 16))
                         .foregroundColor(.blue)
                 }
-                .padding(.vertical)
+                .padding(.vertical, 5)
+                .padding(.trailing, 5)
             }
-            .clipped()
         }
     }
 }
@@ -67,7 +91,7 @@ extension View {
     }
 }
 
-// Struct so indidual corner radius can be done
+// Struct so individual corner radius can be done
 struct RoundedCorner: Shape {
 
     var radius: CGFloat = .infinity
@@ -81,6 +105,6 @@ struct RoundedCorner: Shape {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView(name: "XR-7", price: "$1,025,000", image: "xr-7")
+        RowView(make: "", model: "XR-7", price: "$1,025,000", image: "xr-7", rating: 4)
     }
 }
