@@ -25,7 +25,7 @@ struct ContentView: View {
                 
                 // Loop through the list of vehicles and add them to the screen
                 ForEach(model.vehicles) { vehicle in
-                    RowView(make: vehicle.make, model: vehicle.model, price: vehicle.price, image: vehicle.image, rating: vehicle.rating)
+                    CardView(make: vehicle.make, model: vehicle.model, price: vehicle.price, image: vehicle.image, rating: vehicle.rating)
                 }
             }
         }

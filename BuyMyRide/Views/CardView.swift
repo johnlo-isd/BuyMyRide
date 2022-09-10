@@ -1,5 +1,5 @@
 //
-//  RowView.swift
+//  CardView.swift
 //  BuyMyRide
 //
 //  Created by John Loeppky on 2022-08-18.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RowView: View {
+struct CardView: View {
     
     var make: String
     var model: String
@@ -105,6 +105,6 @@ struct RoundedCorner: Shape {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        RowView(make: "", model: "XR-7", price: "$1,025,000", image: "xr-7", rating: 4)
+        CardView(make: "", model: "XR-7", price: "$1,025,000", image: "xr-7", rating: 4)
     }
 }
