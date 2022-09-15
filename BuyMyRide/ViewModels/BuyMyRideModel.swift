@@ -7,10 +7,10 @@
 
 import Foundation
 
-@MainActor class BuyMyRideModel: ObservableObject {
+class BuyMyRideModel: ObservableObject {
     
     @Published var vehicles = [Vehicle]()
-    @Published var selection: Set<Vehicle> = [] // the representation of view-local data that changes dynamically
+    @Published var selection: Set<Vehicle> = [] // local data that changes dynamically
     
     init() {
         
@@ -21,13 +21,15 @@ import Foundation
         self.vehicles = service.getLocalData()
     }
     
-    // Expand selected vehicle details
-    func expand(_ vehicle: Vehicle) {
+    // Expand/Collapse selected vehicle details
+    func expandCollapse(_ vehicle: Vehicle) {
         
         // Keep track of vehicle selected
         if selection.contains(vehicle) {
+            // Collapse
             selection.remove(vehicle)
         } else {
+            // Expand
             selection.insert(vehicle)
         }
     }

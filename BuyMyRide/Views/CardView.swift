@@ -38,12 +38,11 @@ struct CardView: View {
                     VStack(alignment: .leading) {
                         
                         Text(vehicle.make + " " + vehicle.model)
-                            .bold()
-                            .font(Font.custom(Constants.fontH1, size: Constants.fontH1Size))
+                            .font(Font.system(size: Constants.headline, weight: .semibold))
                             .foregroundColor(ColorManager.titleColor)
                         
                         Text(vehicle.price)
-                            .font(.footnote)
+                            .font(Font.system(size: Constants.footnote))
                             .foregroundColor(ColorManager.lightColor)
                         
                         // Rating
@@ -52,21 +51,21 @@ struct CardView: View {
                             // The number of stars rated
                             ForEach (1..<vehicle.rating+1) { i in
                                 Image(systemName: "star.fill")
-                                    .font(.footnote)
-                                    .foregroundColor(ColorManager.titleColor)
+                                    .font(Font.system(size: Constants.caption2))
                                     .padding(.horizontal, -5)
                             }
+                            .foregroundColor(ColorManager.titleColor)
                             
                             // The number of stars not rated
                             if vehicle.rating < 5 {
                                 ForEach(0..<5-vehicle.rating) { i in
                                     Image(systemName: "star")
-                                        .font(.footnote)
+                                        .font(Font.system(size: Constants.caption2))
                                         .padding(.horizontal, -5)
                                 }
+                                .foregroundColor(ColorManager.lightColor)
                             }
                         }
-                        .font(.system(size: 9))
                         
                         // Pros and Cons
                         
@@ -76,7 +75,7 @@ struct CardView: View {
                             if vehicle.pros != nil {
                                 Text(Constants.pros + ":")
                                     .bold()
-                                    .font(.footnote)
+                                    .font(Font.system(size: Constants.footnote))
                                 
                                 VStack(alignment: .leading) {
                                     
@@ -86,7 +85,7 @@ struct CardView: View {
                                             Text(" •")
                                             Text(item)
                                         }
-                                        .font(.footnote)
+                                        .font(Font.system(size: Constants.footnote))
                                     }
                                 }
                             }
@@ -95,7 +94,7 @@ struct CardView: View {
                             if vehicle.cons != nil {
                                 Text(Constants.cons + ":")
                                     .bold()
-                                    .font(.footnote)
+                                    .font(Font.system(size: Constants.footnote))
                                 
                                 VStack(alignment: .leading) {
                                     
@@ -105,7 +104,7 @@ struct CardView: View {
                                             Text(" •")
                                             Text(item)
                                         }
-                                        .font(.footnote)
+                                        .font(Font.system(size: Constants.footnote))
                                     }
                                 }
                             }
@@ -113,7 +112,7 @@ struct CardView: View {
                             // There are no Pros or Cons
                             if vehicle.pros == nil && vehicle.cons == nil {
                                 Text(Constants.noDetails)
-                                    .font(.footnote)
+                                    .font(Font.system(size: Constants.footnote))
                             }
                         }
                         
@@ -121,7 +120,7 @@ struct CardView: View {
                         
                         Text(Constants.ShowDetails)
                             .bold()
-                            .font(Font.system(size: Constants.fontH3Size))
+                            .font(Font.system(size: Constants.subhead))
                             .foregroundColor(.blue)
                     }
                     .padding(.vertical, 5)

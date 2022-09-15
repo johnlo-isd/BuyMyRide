@@ -17,12 +17,17 @@ struct Constants {
     static var cons = "Cons"
     
     // Typography
-    static var fontH1 = "Avenir Heavy"
-    static var fontH1Size = CGFloat(16)
-    static var fontH3 = "Arial Regular"
-    static var fontH3Size = CGFloat(14)
-    static var fontBody = ""
-    static var fontBodySize = CGFloat(14)
+    static var largeTitle = CGFloat(34)
+    static var title1 = CGFloat(28)
+    static var title2 = CGFloat(22)
+    static var title3 = CGFloat(20)
+    static var headline = CGFloat(17)
+    static var callout = CGFloat(16)
+    static var body = CGFloat(17)
+    static var subhead = CGFloat(15)
+    static var footnote = CGFloat(13)
+    static var caption1 = CGFloat(12)
+    static var caption2 = CGFloat(11)
     
     static var cornerRadius: CGFloat = 15
 }
