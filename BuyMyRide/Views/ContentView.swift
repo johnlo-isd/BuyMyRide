@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var model: BuyMyRideModel
+    @State var isExpanded: Bool = false
+    @State var selected: Int? = 0 // to have the first card expanded by default when app starts
     
     var body: some View {
         
@@ -26,13 +28,13 @@ struct ContentView: View {
                 // Loop through the list of vehicles and add them to the screen
                 ForEach(model.vehicles) { vehicle in
                     
-                    CardView(vehicle: vehicle, isExpanded: model.selection.contains(vehicle))
+                    CardView(vehicle: vehicle, isExpanded: model.selection.contains(vehicle), selected: $selected)
                         .onTapGesture {
-                            // Expand/collapse the card when it's tapped
-                            model.expandCollapse(vehicle)
+                            // Animate the expanding/collapsing of the card when it's tapped
+                            withAnimation {
+                                selected = selected == vehicle.id ? nil : vehicle.id
+                            }
                         }
-                        // Animate the expand/collapse
-                        .animation(.easeInOut(duration: 0.2), value: model.selection)
                 }
             }
         }

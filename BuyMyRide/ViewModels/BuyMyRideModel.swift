@@ -9,7 +9,7 @@ import Foundation
 
 class BuyMyRideModel: ObservableObject {
     
-    @Published var vehicles = [Vehicle]()
+    @Published var vehicles: [Vehicle] = []
     @Published var selection: Set<Vehicle> = [] // local data that changes dynamically
     
     init() {

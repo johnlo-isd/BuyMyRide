@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Vehicle: Codable, Identifiable, Hashable {
+struct Vehicle: Codable, Identifiable, Hashable { // conform to Hashable so that Vehicle can be stored in Set in the ContentView
     
     var id: Int
     var make: String
@@ -15,6 +15,6 @@ struct Vehicle: Codable, Identifiable, Hashable {
     var price: String
     var image: String
     var rating: Int
-    var pros: [String]?
-    var cons: [String]?
+    var pros: [String]
+    var cons: [String]
 }

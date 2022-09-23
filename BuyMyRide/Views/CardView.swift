@@ -9,8 +9,10 @@ import SwiftUI
 
 struct CardView: View {
     
-    var vehicle: Vehicle
+    @EnvironmentObject var model: BuyMyRideModel
+    let vehicle: Vehicle
     let isExpanded: Bool
+    @Binding var selected: Int?
     
     var body: some View {
         
@@ -19,7 +21,7 @@ struct CardView: View {
             // Card
             ZStack(alignment: .leading) {
                 
-                // Background
+                // Card background
                 Rectangle()
                     .foregroundColor(.white)
                     .cornerRadius(Constants.cornerRadius)
@@ -49,7 +51,7 @@ struct CardView: View {
                         HStack {
                             
                             // The number of stars rated
-                            ForEach (1..<vehicle.rating+1) { i in
+                            ForEach (1..<vehicle.rating+1, id: \.self) { i in
                                 Image(systemName: "star.fill")
                                     .font(Font.system(size: Constants.caption2))
                                     .padding(.horizontal, -5)
@@ -58,7 +60,7 @@ struct CardView: View {
                             
                             // The number of stars not rated
                             if vehicle.rating < 5 {
-                                ForEach(0..<5-vehicle.rating) { i in
+                                ForEach(0..<5-vehicle.rating, id: \.self) { i in
                                     Image(systemName: "star")
                                         .font(Font.system(size: Constants.caption2))
                                         .padding(.horizontal, -5)
@@ -68,52 +70,8 @@ struct CardView: View {
                         }
                         
                         // Pros and Cons
-                        
-                        if isExpanded {
-                            
-                            // Are there any Pros
-                            if vehicle.pros != nil {
-                                Text(Constants.pros + ":")
-                                    .bold()
-                                    .font(Font.system(size: Constants.footnote))
-                                
-                                VStack(alignment: .leading) {
-                                    
-                                    // Loop through the pros
-                                    ForEach(vehicle.pros!, id: \.self) { item in
-                                        HStack(alignment: .top) {
-                                            Text(" •")
-                                            Text(item)
-                                        }
-                                        .font(Font.system(size: Constants.footnote))
-                                    }
-                                }
-                            }
-                            
-                            // Are the any Cons
-                            if vehicle.cons != nil {
-                                Text(Constants.cons + ":")
-                                    .bold()
-                                    .font(Font.system(size: Constants.footnote))
-                                
-                                VStack(alignment: .leading) {
-                                    
-                                    // Loop through the cons
-                                    ForEach(vehicle.cons!, id: \.self) { item in
-                                        HStack(alignment: .top) {
-                                            Text(" •")
-                                            Text(item)
-                                        }
-                                        .font(Font.system(size: Constants.footnote))
-                                    }
-                                }
-                            }
-                            
-                            // There are no Pros or Cons
-                            if vehicle.pros == nil && vehicle.cons == nil {
-                                Text(Constants.noDetails)
-                                    .font(Font.system(size: Constants.footnote))
-                            }
+                        if selected == vehicle.id {
+                            expandedView()
                         }
                         
                         Spacer()
@@ -129,6 +87,48 @@ struct CardView: View {
             }
         }
         .contentShape(Rectangle())
+    }
+    
+    @ViewBuilder
+    func expandedView() -> some View {
+        
+        // Are there any Pros
+        if vehicle.pros.isEmpty == false {
+            Text(Constants.pros + ":")
+                .bold()
+                .font(Font.system(size: Constants.footnote))
+            
+            VStack(alignment: .leading) {
+                
+                // Loop through the pros
+                ForEach(vehicle.pros, id: \.self) { item in
+                    HStack(alignment: .top) {
+                        Text(" •")
+                        Text(item)
+                    }
+                    .font(Font.system(size: Constants.footnote))
+                }
+            }
+        }
+        
+        // Are there any Cons
+        if vehicle.cons.isEmpty == false {
+            Text(Constants.cons + ":")
+                .bold()
+                .font(Font.system(size: Constants.footnote))
+            
+            VStack(alignment: .leading) {
+                
+                // Loop through the cons
+                ForEach(vehicle.cons, id: \.self) { item in
+                    HStack(alignment: .top) {
+                        Text(" •")
+                        Text(item)
+                    }
+                    .font(Font.system(size: Constants.footnote))
+                }
+            }
+        }
     }
 }
 
@@ -154,6 +154,6 @@ struct RoundedCorner: Shape {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(vehicle: Vehicle(id: 0, make: "", model: "", price: "", image: "", rating: 3), isExpanded: true)
+        CardView(vehicle: Vehicle(id: 0, make: "", model: "", price: "", image: "", rating: 3, pros: [""], cons: [""]), isExpanded: true, selected: Binding.constant(1))
     }
 }
