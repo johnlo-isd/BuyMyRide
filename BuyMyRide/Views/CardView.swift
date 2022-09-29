@@ -71,7 +71,44 @@ struct CardView: View {
                         
                         // Pros and Cons
                         if selected == vehicle.id {
-                            expandedView()
+                            
+                            // Are there any Pros
+                            if vehicle.pros.isEmpty == false {
+                                Text(Constants.pros + ":")
+                                    .bold()
+                                    .font(Font.system(size: Constants.footnote))
+                                
+                                VStack(alignment: .leading) {
+                                    
+                                    // Loop through the pros
+                                    ForEach(vehicle.pros, id: \.self) { item in
+                                        HStack(alignment: .top) {
+                                            Text(" •")
+                                            Text(item)
+                                        }
+                                        .font(Font.system(size: Constants.footnote))
+                                    }
+                                }
+                            }
+                            
+                            // Are there any Cons
+                            if vehicle.cons.isEmpty == false {
+                                Text(Constants.cons + ":")
+                                    .bold()
+                                    .font(Font.system(size: Constants.footnote))
+                                
+                                VStack(alignment: .leading) {
+                                    
+                                    // Loop through the cons
+                                    ForEach(vehicle.cons, id: \.self) { item in
+                                        HStack(alignment: .top) {
+                                            Text(" •")
+                                            Text(item)
+                                        }
+                                        .font(Font.system(size: Constants.footnote))
+                                    }
+                                }
+                            }
                         }
                         
                         Spacer()
@@ -87,48 +124,6 @@ struct CardView: View {
             }
         }
         .contentShape(Rectangle())
-    }
-    
-    @ViewBuilder
-    func expandedView() -> some View {
-        
-        // Are there any Pros
-        if vehicle.pros.isEmpty == false {
-            Text(Constants.pros + ":")
-                .bold()
-                .font(Font.system(size: Constants.footnote))
-            
-            VStack(alignment: .leading) {
-                
-                // Loop through the pros
-                ForEach(vehicle.pros, id: \.self) { item in
-                    HStack(alignment: .top) {
-                        Text(" •")
-                        Text(item)
-                    }
-                    .font(Font.system(size: Constants.footnote))
-                }
-            }
-        }
-        
-        // Are there any Cons
-        if vehicle.cons.isEmpty == false {
-            Text(Constants.cons + ":")
-                .bold()
-                .font(Font.system(size: Constants.footnote))
-            
-            VStack(alignment: .leading) {
-                
-                // Loop through the cons
-                ForEach(vehicle.cons, id: \.self) { item in
-                    HStack(alignment: .top) {
-                        Text(" •")
-                        Text(item)
-                    }
-                    .font(Font.system(size: Constants.footnote))
-                }
-            }
-        }
     }
 }
 

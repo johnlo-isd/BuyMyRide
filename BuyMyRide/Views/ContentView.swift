@@ -28,7 +28,7 @@ struct ContentView: View {
                 // Loop through the list of vehicles and add them to the screen
                 ForEach(model.vehicles) { vehicle in
                     
-                    CardView(vehicle: vehicle, isExpanded: model.selection.contains(vehicle), selected: $selected)
+                    CardView(vehicle: vehicle, isExpanded: model.selection.contains(vehicle), selected: $selected) // a third parameter, selected, so we can have the first card expanded at the start of the app
                         .onTapGesture {
                             // Animate the expanding/collapsing of the card when it's tapped
                             withAnimation {
